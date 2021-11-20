@@ -13,10 +13,11 @@ public:
   Eat() {
     circle.setFillColor(sf::Color(rand() % 255, rand() % 255, rand() % 255));
     circle.setPosition(sf::Vector2f(rand() % mapW, rand() % mapH));
-    size = float_t(rand() % 10) / 10;
-    circle.setRadius(size * 10);
+    size = float_t(rand() % 10);
+    circle.setRadius(size );
     circle.setPointCount(circle.getRadius() * 2.0F);
     circle.setOrigin(circle.getRadius(), circle.getRadius());
+    size /= 10;
   }
 
   sf::Vector2f getPoint() {
